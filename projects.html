@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #fff;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .sidebar a:hover {
+            background: #555;
+            padding-left: 15px;
+        }
+
+        .main {
+            flex-grow: 1;
+            padding: 40px;
+            animation: fade 1s;
+        }
+
+        .main h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: clamp(28px, 5vw, 35px);
+            color: #333;
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project {
+            flex: 1;
+            min-width: 300px;
+            background: #f4f4f4;
+            padding: 25px;
+            border-left: 5px solid #333;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            background: #e0e0e0;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project h3 { margin-bottom: 10px; }
+
+        .project p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+
+            .sidebar {
+                width: 100%;
+                padding: 15px;
+                text-align: center;
+            }
+
+            .sidebar h2 { display: none; }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 2px 5px;
+            }
+
+            .main { padding: 30px 20px; }
+
+            .project { min-width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>Portfolio</h2>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+</div>
+
+<div class="main">
+    <h1>My Projects</h1>
+
+    <div class="project-container">
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>A simple website using HTML and CSS to showcase my personal information and achievements.</p>
+        </div>
+
+        <div class="project">
+            <h3>Gym System</h3>
+            <p>A desktop-based management system created using C# WinForms for tracking gym memberships and activities.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

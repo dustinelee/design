@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .sidebar h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            background: #555;
+        }
+
+        .main {
+            flex-grow: 1;
+            padding: 40px;
+            animation: fadeIn 1s;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: clamp(28px, 5vw, 35px);
+        }
+
+        .exp {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .exp:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* 5. MOBILE VERSION */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .sidebar h3 {
+                display: none;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            .main {
+                padding: 20px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h3>Portfolio</h3>
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+    </div>
+
+    <div class="main">
+        <h1>Experience</h1>
+
+        <div class="exp">
+            <div class="title">OJT / Internship</div>
+            <span class="date">2024 - 2025</span>
+            <p><b>Jollibee Bamban</b></p>
+            <ul>
+                <li>Food Serving</li>
+                <li>Cooking</li>
+                <li>Area Cleaning</li>
+            </ul>
+        </div>
+
+        <div class="exp">
+            <div class="title">School Project Developer</div>
+            <span class="date">2026</span>
+            <p><b>Academic Project</b></p>
+            <ul>
+                <li>Created a gym management system</li>
+                <li>Used C# WinForms for development</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

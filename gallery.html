@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            background: #555;
+        }
+
+        .main {
+            flex-grow: 1;
+            padding: 40px;
+            animation: fadeIn 1s;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: clamp(28px, 5vw, 35px);
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid img {
+            width: 100%;
+            height: 300px; 
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+            background-color: #ddd;
+        }
+
+        .grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .sidebar h2 {
+                display: none;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            .main {
+                padding: 20px;
+            }
+
+            .grid {
+                /* 1 o 2 columns para sa mobile phones */
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+
+            .grid img {
+                height: 180px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Portfolio</h2>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <div class="main">
+        <h1>Gallery</h1>
+
+        <div class="grid">
+            <img src="1d.jpg" alt="Gallery Image 1">
+            <img src="2d.jpg" alt="Gallery Image 2">
+            <img src="3d.jpg" alt="Gallery Image 3">
+            <img src="4d.jpg" alt="Gallery Image 4">
+            <img src="5d.jpg" alt="Gallery Image 5">
+            <img src="6d.jpg" alt="Gallery Image 6">
+            <img src="7d.jpg" alt="Gallery Image 7">
+            <img src="8d.jpg" alt="Gallery Image 8">
+            <img src="9d.jpg" alt="Gallery Image 9">
+        </div>
+    </div>
+
+</body>
+</html>

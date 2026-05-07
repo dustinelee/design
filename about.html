@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+
+<style>
+
+body { 
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+
+.sidebar {
+    width: 200px;
+    background: #333;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0; 
+}
+
+.sidebar h2 {
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 10px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover { 
+    background: #555;
+}
+
+
+.main {
+    flex-grow: 1;
+    padding: 40px;
+    text-align: center;
+    animation: fade 1s;
+}
+
+.main h1 {
+    font-size: clamp(28px, 5vw, 40px); 
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.main p {
+    max-width: 800px;
+    margin: 0 auto; 
+    line-height: 1.8;
+    color: #444;
+    font-size: 17px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; 
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+        display: none; 
+    }
+
+    .sidebar a {
+        display: inline-block; 
+        margin: 0 10px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+}
+
+@keyframes fade {
+    from { opacity: 0; } to { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>Portfolio</h2>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+</div>
+
+<div class="main">
+    <h1>About Me</h1>
+    <p>
+        Hi! I'm <b></b>Dustin Lee Dizon</b>. I am a hardworking and determined person with big dreams in life. 
+        I enjoy learning new things, especially in technology and programming.
+        <br><br>
+        I like creating projects such as websites and systems, and I always try to improve my skills 
+        by exploring new ideas and practicing regularly. I also enjoy solving problems, 
+        which helps me grow as a future programmer.
+        <br><br>
+        In my free time, I enjoy spending time online learning, practicing coding, 
+        and sometimes relaxing with things I enjoy, like playing basketball and online games. 
+        My favorite color is blue, and my favorite food is fried chicken.
+        <br><br>
+        My dream is to become a successful computer programmer and build useful applications that can help people. 
+        I want to use my skills not only for my personal growth but also to support my family and create a better future.
+        <br><br>
+        I believe that hard work, discipline, and continuous learning are the keys to achieving my goals.
+    </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .sidebar h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            background: #555;
+        }
+
+        .main {
+            flex-grow: 1;
+            padding: 40px;
+            animation: fadeIn 1s;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: clamp(28px, 5vw, 35px);
+            color: #333;
+        }
+
+        .education-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .edu {
+            width: 100%;
+            max-width: 700px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .edu:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .edu p {
+            line-height: 1.5;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .sidebar h3 {
+                display: none;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            .main {
+                padding: 20px;
+            }
+
+            .edu {
+                padding: 20px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h3>Portfolio</h3>
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+    </div>
+
+    <div class="main">
+        <h1>Education</h1>
+
+        <div class="education-container">
+            <div class="edu">
+                <div class="title">College</div>
+                <div class="date">2026 - Present</div>
+                <p><b>Clark College of Science and Technology</b></p>
+                <p>Associate in Computer Technology</p>
+            </div>
+
+            <div class="edu">
+                <div class="title">Senior High School</div>
+                <div class="date">2024 - 2025</div>
+                <p><b>Dapdap High School</b></p>
+                <p>ABM Strand</p>
+            </div>
+
+            <div class="edu">
+                <div class="title">Junior High School</div>
+                <div class="date">2012 - 2024</div>
+                <p><b>Dapdap High School</b></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

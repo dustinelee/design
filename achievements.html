@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+        }
+       
+        .sidebar {
+            width: 220px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            transition: 0.2s;
+            border-radius: 4px;
+        }
+
+        .sidebar a:hover {
+            background: #555;
+        }
+       
+        .main {
+            flex-grow: 1;
+            padding: 40px;
+            animation: fadeIn 1s;
+        }
+
+        .main h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: clamp(24px, 5vw, 35px);
+            color: #333;
+        }
+      
+        .achievement-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        
+        .achievement {
+            width: 100%;
+            max-width: 500px; 
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .achievement:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        /* IMAGE */
+        .achievement img {
+            width: 100%; 
+            max-width: 350px;
+            height: auto; 
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .achievement ul {
+            text-align: left;
+            padding-left: 20px;
+            display: inline-block; 
+        }
+
+        .achievement li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .sidebar h2 {
+                display: none;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 0 5px;
+                padding: 8px 15px;
+            }
+
+            .main {
+                padding: 20px;
+            }
+
+            .achievement {
+                padding: 15px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; } to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Portfolio</h2>
+        <a href="index.html">Home</a>
+        <a href="achievements.html">Achievements</a>
+    </div>
+
+    <div class="main">
+        <h1>Achievements</h1>
+
+        <div class="achievement-container">
+            <div class="achievement">
+                <img src="8d.jpg" alt="Achievement Image">
+                <div class="label">Academic Achievements</div>
+                <ul>
+                    <li>With Honors</li>
+                    <li>Best in Research</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
